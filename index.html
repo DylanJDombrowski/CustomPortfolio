@@ -1,427 +1,477 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Bootstrap CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/31149d48b0.js"
-            crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/31149d48b0.js"
+      crossorigin="anonymous"
+    ></script>
 
-        <title>Dylan Dombrowski Portfolio</title>
+    <title>Dylan Dombrowski Portfolio</title>
 
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X17R9YVTQB"></script>
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-X17R9YVTQB"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-X17R9YVTQB');
-</script>
-    <body>
-        <!-- Page Up Button -->
-        <button class="page-up-btn" onclick="scrollToTop()" id="pageUpBtn">
-            <i class="fas fa-arrow-up"></i>
+    gtag("config", "G-X17R9YVTQB");
+  </script>
+  <body>
+    <!-- Page Up Button -->
+    <button class="page-up-btn" onclick="scrollToTop()" id="pageUpBtn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <!-- <img id="vettras-logo" src="img/vettras-logo-rs.svg" alt="Vettras Logo" class="d-inline-block align-text-bottom"> -->
+          Dylan J. Dombrowski
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-        <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <!-- <img id="vettras-logo" src="img/vettras-logo-rs.svg" alt="Vettras Logo" class="d-inline-block align-text-bottom"> -->
-                    Dylan J. Dombrowski
-                </a>
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse"
-                    id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Main Banner -->
+    <section class="bgimage" id="home">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+            <h2 class="hero_title">Hey, it's me Dylan</h2>
+            <p class="hero_desc">
+              I am a professional Developer & Freelancer in Louisville Kentucky
+            </p>
+            <a href="#about" class="arrow-down-link nav-link">
+              <div class="arrow-down"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="section-spacing">
+      <div class="container mt-4 pt-4">
+        <h1 class="text-center">About Me</h1>
+        <!-- Content of the About section goes here -->
+        <div class="row mt-4">
+          <div class="col-lg-4">
+            <img src="img/about2.jpg" class="imageAboutPage" alt />
+          </div>
+
+          <div class="col-lg-8">
+            <p>Top section text</p>
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <ul>
+                  <li>Name: Dylan Dombrowski</li>
+                  <li>Age: 21</li>
+                  <li>Occupation: Junior Developer</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li>Name: Not Sure if I want this column</li>
+                  <li>Age: Youngin at heart but mentally like 108</li>
+                  <li>Occupation: Experiencer</li>
+                </ul>
+              </div>
             </div>
-        </nav>
-
-        <!-- Main Banner -->
-        <section class="bgimage" id="home">
-            <div class="container-fluid">
-                <div class="row">
-                    <div
-                        class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                        <h2 class="hero_title">Hey, it's me Dylan</h2>
-                        <p class="hero_desc">I am a professional Developer &
-                            Freelancer in
-                            Louisville Kentucky</p>
-                        <a href="#about" class="arrow-down-link nav-link">
-                            <div class="arrow-down"></div>
-                        </a>
-                    </div>
-                </div>
+            <div class="row mt-3">
+              <p>Bottom section text</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- About section -->
-        <section id="about" class="section-spacing">
-            <div class="container mt-4 pt-4">
-                <h1 class="text-center">About Me</h1>
-                <!-- Content of the About section goes here -->
-                <div class="row mt-4">
-                    <div class="col-lg-4">
-                        <img src="img/about2.jpg" class="imageAboutPage" alt>
-                    </div>
-
-                    <div class="col-lg-8">
-                        <p> Top section text
-
-                        </p>
-                        <div class="row mt-3">
-                            <div class="col-md-6">
-                                <ul>
-                                    <li>Name: Dylan Dombrowski</li>
-                                    <li>Age: 21</li>
-                                    <li>Occupation: Junior Developer</li>
-
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul>
-                                    <li>Name: Not Sure if I want this column</li>
-                                    <li>Age: Youngin at heart but mentally like
-                                        108</li>
-                                    <li>Occupation: Experiencer</li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <p> Bottom section text
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Services section -->
+    <section id="services" class="section-spacing">
+      <div class="container">
+        <h1 class="text-center">Services</h1>
+        <!-- Content of the Services section goes here -->
+        <div class="row">
+          <div class="col-lg-4 mt-4">
+            <div class="card servicesText">
+              <div class="card-body">
+                <i class="fas servicesIcon fa-clock"></i>
+                <h4 class="card-title mt-3">Website Development</h4>
+                <p class="card-text mt-3">
+                  Where it all began, I started my journey in web development
+                  and have been doing it ever since. I have experience in HTML,
+                  CSS, JS, PHP, and MySQL. I have also worked with frameworks
+                  such as Bootstrap and Tailwind CSS.
+                </p>
+              </div>
             </div>
-        </section>
-
-        <!-- Services section -->
-        <section id="services" class="section-spacing">
-            <div class="container">
-                <h1 class="text-center">Services</h1>
-                <!-- Content of the Services section goes here -->
-                <div class="row">
-                    <div class="col-lg-4 mt-4">
-                        <div class="card servicesText">
-                            <div class="card-body">
-                                <i class="fas servicesIcon fa-clock"></i>
-                                <h4 class="card-title mt-3">Website
-                                    Development</h4>
-                                <p class="card-text mt-3">Where it all began, I
-                                    started my journey in web development
-                                    and have been doing it ever since. I
-                                    have experience in HTML, CSS, JS, PHP,
-                                    and MySQL. I have also worked with
-                                    frameworks such as Bootstrap and
-                                    Tailwind CSS.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mt-4">
-                        <div class="card servicesText">
-                            <div class="card-body">
-                                <i class='fas servicesIcon fa-layer-group'></i>
-                                <h4 class="card-title mt-3">Website Design</h4>
-                                <p class="card-text mt-3">After I started
-                                    developing websites I started to get
-                                    into the design aspect of it. I have
-                                    experience in Adobe Photoshop and
-                                    Adobe XD. I have also worked with
-                                    frameworks such as Bootstrap and
-                                    Tailwind CSS.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4">
-                        <div class="card servicesText">
-                            <div class="card-body">
-                                <i class='far servicesIcon fa-check-circle'></i>
-                                <h4 class="card-title mt-3">Website
-                                    Deployment</h4>
-                                <p class="card-text mt-3">Deployment is
-                                    something that I have been doing for a
-                                    while now, eventually you need somewhere to
-                                    put your work and know how to do that. I
-                                    have experience in
-                                    deploying websites to cPanel, AWS,
-                                    Heroku, and Netlify.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4 mt-4">
-                        <div class="card servicesText">
-                            <div class="card-body">
-                                <i class='fas servicesIcon fa-search'></i>
-                                <h4 class="card-title mt-3">SEO</h4>
-                                <p class="card-text mt-3">After creating
-                                    content,
-                                    you need to make sure that people can find
-                                    it. I have experience in SEO and have
-                                    worked with Google Analytics and Google
-                                    Search Console.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4">
-                        <div class="card servicesText">
-                            <div class="card-body">
-                                <i class='fas servicesIcon fa-shield-alt'></i>
-                                <h4 class="card-title mt-3">DevOps</h4>
-                                <p class="card-text mt-3">Working with my
-                                    universities IT departments, I have
-                                    experience in DevOps and have worked with
-                                    Git, GitHub, and GitLab.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4">
-                        <div class="card servicesText">
-                            <div class="card-body">
-                                <i class='fas servicesIcon fa-wrench'></i>
-                                <h4 class="card-title mt-3">QA</h4>
-                                <p class="card-text mt-3">Of course when
-                                    creating new things you need to make sure
-                                    that they work. I have experience in QA and
-                                    have worked with Selenium and JUnit.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card servicesText">
+              <div class="card-body">
+                <i class="fas servicesIcon fa-layer-group"></i>
+                <h4 class="card-title mt-3">Website Design</h4>
+                <p class="card-text mt-3">
+                  After I started developing websites I started to get into the
+                  design aspect of it. I have experience in Adobe Photoshop and
+                  Adobe XD. I have also worked with frameworks such as Bootstrap
+                  and Tailwind CSS.
+                </p>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- Portfolio section -->
-        <section id="portfolio" class="section-spacing">
-            <div class="container mt-3">
-                <h1 class="text-center">Portfolio</h1>
-                <!-- Content of the Portfolio section goes here -->
-                <div class="row">
-                    <div class="col-lg-4 mt-4">
-                        <div class="card">
-                            <img class="card-img-top"
-                                src="img/portfolioImage1.jpg"
-                                alt="Card image" style="width:100%">
-                            <div class="card-body">
-                                <h4 class="card-title">Airbnb Clone</h4>
-                                <p class="card-text">a work in progress project
-                                    using React</p>
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-success">Link</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4">
-                        <div class="card portfolioContent">
-                            <img class="card-img-top"
-                                src="img/portfolioImage4.jpg"
-                                alt="Card image" style="width:100%">
-                            <div class="card-body">
-                                <h4 class="card-title">Highly OP team website</h4>
-                                <p class="card-text">a website that started as a
-                                    wordpress, now evolved to a custom solution
-                                    with intrakit processes of automation</p>
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-success">Link</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4">
-                        <div class="card portfolioContent">
-                            <img class="card-img-top"
-                                src="img/portfolioImage3.jpg"
-                                alt="Card image" style="width:100%">
-                            <div class="card-body">
-                                <h4 class="card-title">Product Landing Page</h4>
-                                <p class="card-text">Lorem Ipsum is simply
-                                    dummy text of the printing and
-                                    typesetting industry.</p>
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-success">Link</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-4 mt-4">
-                        <div class="card portfolioContent">
-                            <img class="card-img-top"
-                                src="img/portfolioImage4.jpg"
-                                alt="Card image" style="width:100%">
-                            <div class="card-body">
-                                <h4 class="card-title">Messaging Service</h4>
-                                <p class="card-text">Lorem Ipsum is simply
-                                    dummy text of the printing and
-                                    typesetting industry.</p>
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-success">Link</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4">
-                        <div class="card portfolioContent">
-                            <img class="card-img-top"
-                                src="img/portfolioImage1.jpg"
-                                alt="Card image" style="width:100%">
-                            <div class="card-body">
-                                <h4 class="card-title">Twitter Clone</h4>
-                                <p class="card-text">Lorem Ipsum is simply
-                                    dummy text of the printing and
-                                    typesetting industry.</p>
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-success">Link</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4">
-                        <div class="card portfolioContent">
-                            <img class="card-img-top"
-                                src="img/portfolioImage4.jpg"
-                                alt="Card image" style="width:100%">
-                            <div class="card-body">
-                                <h4 class="card-title">Blog App</h4>
-                                <p class="card-text">Lorem Ipsum is simply
-                                    dummy text of the printing and
-                                    typesetting industry.</p>
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-success">Link</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card servicesText">
+              <div class="card-body">
+                <i class="far servicesIcon fa-check-circle"></i>
+                <h4 class="card-title mt-3">Website Deployment</h4>
+                <p class="card-text mt-3">
+                  Deployment is something that I have been doing for a while
+                  now, eventually you need somewhere to put your work and know
+                  how to do that. I have experience in deploying websites to
+                  cPanel, AWS, Heroku, and Netlify.
+                </p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <!-- Contact section -->
-        <section id="contact">
-            <div class="container mt-3 contactContent">
-                <h1 class="text-center">Contact Me</h1>
-                <!-- Content of the Contact section goes here -->
-                <div class="row mt-4">
-                    <div class="col-lg-6">
-                        <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
-                        <div
-                            style="overflow:hidden;resize:none;max-width:100%;width:500px;height:500px;">
-                            <div id="canvas-for-googlemap"
-                                style="height:100%; width:100%;max-width:100%;"><iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200698.44611376358!2d-85.84157761183431!3d38.18868981991168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88690b1ab35bd511%3A0xd4d3b4282071fd32!2sLouisville%2C%20KY!5e0!3m2!1sen!2sus!4v1690230475917!5m2!1sen!2sus"
-                                    width="600" height="450"
-                                    style="border:0;" allowfullscreen
-                                    loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-                            <a class="embedded-map-code" rel="nofollow"
-                                href="https://kbj9qpmy.com/hrn"
-                                id="get-map-data">InMotion Hosting</a>
-                            <style>#canvas-for-googlemap img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <!-- form fields -->
-                        <form>
-                            <input type="text"
-                                class="form-control form-control-lg"
-                                placeholder="Name">
-                            <input type="email"
-                                class="form-control mt-3"
-                                placeholder="Email">
-                            <input type="text" class="form-control mt-3"
-                                placeholder="Subject">
-                            <div class="mb-3 mt-3">
-                                <textarea class="form-control" rows="5"
-                                    id="comment" name="text"
-                                    placeholder="Project Details"></textarea>
-                            </div>
-                        </form>
-                        <button type="button"
-                            class="btn btn-success mt-3">Contact Me (I havent
-                            coded this yet but feel free)</button>
-
-                    </div>
-
-                </div>
+        <div class="row">
+          <div class="col-lg-4 mt-4">
+            <div class="card servicesText">
+              <div class="card-body">
+                <i class="fas servicesIcon fa-search"></i>
+                <h4 class="card-title mt-3">SEO</h4>
+                <p class="card-text mt-3">
+                  After creating content, you need to make sure that people can
+                  find it. I have experience in SEO and have worked with Google
+                  Analytics and Google Search Console.
+                </p>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- Footer section -->
-        <footer id="footer">
-            <div class="container-fluid">
-                <!-- Social media icons -->
-                <div class="social-icons mt-4">
-                    <!-- Add links to social media profiles -->
-                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitch"></i></a>
-                </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card servicesText">
+              <div class="card-body">
+                <i class="fas servicesIcon fa-shield-alt"></i>
+                <h4 class="card-title mt-3">DevOps</h4>
+                <p class="card-text mt-3">
+                  Working with my universities IT departments, I have experience
+                  in DevOps and have worked with Git, GitHub, and GitLab.
+                </p>
+              </div>
             </div>
-        </footer>
+          </div>
 
-        <!-- JavaScript -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
-    </body>
+          <div class="col-lg-4 mt-4">
+            <div class="card servicesText">
+              <div class="card-body">
+                <i class="fas servicesIcon fa-wrench"></i>
+                <h4 class="card-title mt-3">QA</h4>
+                <p class="card-text mt-3">
+                  Of course when creating new things you need to make sure that
+                  they work. I have experience in QA and have worked with
+                  Selenium and JUnit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio section -->
+    <section id="portfolio" class="section-spacing">
+      <div class="container mt-3">
+        <h1 class="text-center">Portfolio</h1>
+        <!-- Content of the Portfolio section goes here -->
+        <div class="row">
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="img/portfolioImage1.jpg"
+                alt="Card image"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Airbnb Clone</h4>
+                <p class="card-text">a work in progress project using React</p>
+                <div class="text-center">
+                  <a href="#" class="btn btn-success">Link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+            <div class="card portfolioContent">
+              <img
+                class="card-img-top"
+                src="img/portfolioImage4.jpg"
+                alt="Card image"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Highly OP team website</h4>
+                <p class="card-text">
+                  a website that started as a wordpress, now evolved to a custom
+                  solution with intrakit processes of automation
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn btn-success">Link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+            <div class="card portfolioContent">
+              <img
+                class="card-img-top"
+                src="img/portfolioImage3.jpg"
+                alt="Card image"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Product Landing Page</h4>
+                <p class="card-text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn btn-success">Link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-lg-4 mt-4">
+            <div class="card portfolioContent">
+              <img
+                class="card-img-top"
+                src="img/portfolioImage4.jpg"
+                alt="Card image"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Messaging Service</h4>
+                <p class="card-text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn btn-success">Link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+            <div class="card portfolioContent">
+              <img
+                class="card-img-top"
+                src="img/portfolioImage1.jpg"
+                alt="Card image"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Twitter Clone</h4>
+                <p class="card-text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn btn-success">Link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+            <div class="card portfolioContent">
+              <img
+                class="card-img-top"
+                src="img/portfolioImage4.jpg"
+                alt="Card image"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Blog App</h4>
+                <p class="card-text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+                <div class="text-center">
+                  <a href="#" class="btn btn-success">Link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact">
+      <div class="container mt-3 contactContent">
+        <h1 class="text-center">Contact Me</h1>
+        <!-- Content of the Contact section goes here -->
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+            <div
+              style="
+                overflow: hidden;
+                resize: none;
+                max-width: 100%;
+                width: 500px;
+                height: 500px;
+              "
+            >
+              <div
+                id="canvas-for-googlemap"
+                style="height: 100%; width: 100%; max-width: 100%"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200698.44611376358!2d-85.84157761183431!3d38.18868981991168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88690b1ab35bd511%3A0xd4d3b4282071fd32!2sLouisville%2C%20KY!5e0!3m2!1sen!2sus!4v1690230475917!5m2!1sen!2sus"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <a
+                class="embedded-map-code"
+                rel="nofollow"
+                href="https://kbj9qpmy.com/hrn"
+                id="get-map-data"
+                >InMotion Hosting</a
+              >
+              <style>
+                #canvas-for-googlemap img {
+                  max-width: none !important;
+                  background: none !important;
+                  font-size: inherit;
+                  font-weight: inherit;
+                }
+              </style>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <!-- form fields -->
+            <form action="contact.php">
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Name"
+              />
+              <input
+                type="email"
+                class="form-control mt-3"
+                placeholder="Email"
+              />
+              <input
+                type="text"
+                class="form-control mt-3"
+                placeholder="Subject"
+              />
+              <div class="mb-3 mt-3">
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  id="comment"
+                  name="text"
+                  placeholder="Project Details"
+                ></textarea>
+              </div>
+            </form>
+            <button type="button" class="btn btn-success mt-3">
+              Contact Me (I havent coded this yet but feel free)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer id="footer">
+      <div class="container-fluid">
+        <!-- Social media icons -->
+        <div class="social-icons mt-4">
+          <!-- Add links to social media profiles -->
+          <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitch"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
