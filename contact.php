@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_headers = "From: $name <$email>";
 
     if(mail($recipient, $subject, $email_content, $email_headers)) {
-        header("Location: your-website-url?success");
+        header("Location: https://dylanjdombrowski.com/");
     } else {
         header("Location: your-website-url?error");
     }
