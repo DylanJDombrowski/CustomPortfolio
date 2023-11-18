@@ -28,6 +28,7 @@
 nav {
     padding: 15%;
     max-width: auto;
+    background-color: black;
 }
 body{
     background-color: rgb(212, 212, 212);
@@ -123,7 +124,7 @@ body{
     width: 100%;
 }
 .card-title {
-    text-align: center;
+    text-align: left;
 }
 .card:hover .servicesIcon {
     color: #008000;
@@ -137,18 +138,35 @@ body{
     font-size: 36px;
     cursor: pointer;
 }
-.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
+.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover, .fa-github:hover {
     color: #008000;
 }
 .fab {
-    color: #000000;
+    color: white;
+    margin: 0 10px;
 }
-#prefooter {
-    background-color: #808080;
-    text-align: center;
-}
+
 /* footer styling */
-#footer {
-    background-color: #808080;
+.fixed-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black; /* Your desired background color */
+    color: white; /* Text color */
     text-align: center;
+}
+.hero-buttons {
+    margin-top: 20px; /* Adds space above the buttons */
+    display: flex; /* Aligns buttons in a row */
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 20px; /* Adds space between the buttons */
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+.card-subtitle {
+    font-size: smaller; /* Adjust as needed */
+    color: grey;
+    margin-bottom: 10px; /* Adds space below the subtitle */
 }
