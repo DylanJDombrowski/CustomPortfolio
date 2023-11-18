@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dylan Dombrowski's Resume</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <!-- Bootstrap CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -15,13 +16,24 @@
         <script
             src="https://kit.fontawesome.com/31149d48b0.js"
             crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/style.css">
-        <!-- Link to your main stylesheet -->
+
+        <title>Resume - DJD</title>
+
+        <link rel="stylesheet" href="../css/style.css" />
     </head>
     <body>
-        <!-- Navigation Bar (Assumed structure based on typical HTML/CSS/JS websites) -->
+        <!-- Page Up Button -->
+        <button class="page-up-btn" onclick="scrollToTop()" id="pageUpBtn">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- Navigation Bar -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
             <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <!-- <img id="vettras-logo" src="img/vettras-logo-rs.svg" alt="Vettras Logo" class="d-inline-block align-text-bottom"> -->
+                    Dylan J. Dombrowski
+                </a>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -36,29 +48,27 @@
                     id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#home">Home</a>
+                            <a class="nav-link" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
+                            <a class="nav-link" href="achievements.html">Achievements</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                            <a class="nav-link" href="projects.html">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="resume.html">resume</a>
+                            <a class="nav-link" href="resume.html">Resume</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-        <!-- Resume Section -->
         <section id="resume">
             <div class="container">
                 <header>
@@ -107,16 +117,5 @@
                 </section>
             </div>
         </section>
-
-        <!-- Resume Download Button -->
-        <div class="resume-download">
-            <a href="path-to-resume.pdf" target="_blank" class="download-button">Download
-                Resume as PDF</a>
-        </div>
-
-        <!-- Footer (Assumed structure) -->
-        <footer>
-            <p>Copyright &copy; 2023 Dylan Dombrowski</p>
-        </footer>
     </body>
 </html>

@@ -6,15 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
-      event.preventDefault();
-      const targetSection = document.querySelector(this.getAttribute("href"));
-      const elementPosition = targetSection.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + offset;
+      const hrefAttribute = this.getAttribute("href");
 
-      window.scrollBy({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      // Check if the href attribute points to an ID on the same page
+      if (hrefAttribute.startsWith("#")) {
+        event.preventDefault();
+        const targetSection = document.querySelector(hrefAttribute);
+        const elementPosition = targetSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + offset;
+
+        window.scrollBy({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+      // If it points to a different page, allow the default navigation action
     });
   });
 
