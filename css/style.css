@@ -170,3 +170,47 @@ body{
     color: grey;
     margin-bottom: 10px; /* Adds space below the subtitle */
 }
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Style the form input fields */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+/* Style the form submit button */
+button[type="submit"] {
+    background-color: #007bff;
+    /* Change to your preferred button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style the submit button on hover */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    /* Change to the hover color */
+}
