@@ -171,7 +171,7 @@ body{
     margin-bottom: 10px; /* Adds space below the subtitle */
 }
 form {
-    max-width: 400px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -188,7 +188,8 @@ label {
 
 /* Style the form input fields */
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="message"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -214,3 +215,12 @@ button[type="submit"]:hover {
     background-color: #0056b3;
     /* Change to the hover color */
 }
+ .button-wrapper {
+     display: flex;
+     justify-content: center;
+ }
+
+ .btn-primary {
+     width: 30%;
+     margin-top: 15px;
+ }

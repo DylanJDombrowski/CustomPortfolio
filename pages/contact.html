@@ -25,9 +25,9 @@
   </head>
   <body>
     <!-- Page Up Button -->
-    <button class="page-up-btn" onclick="scrollToTop()" id="pageUpBtn">
+    <!-- <button class="page-up-btn" onclick="scrollToTop()" id="pageUpBtn">
       <i class="fas fa-arrow-up"></i>
-    </button>
+    </button> -->
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark navbarScroll">
@@ -123,35 +123,68 @@
 
           <div class="col-lg-6">
             <!-- Contact Form -->
-            <p>
-              This button will redirect to Vettras Solutions, a web development
-              company I work closely with. Project proposals and resources can
-              be found there.
-            </p>
+
             <form
+              id="contact-form"
+              class="form-horizontal"
               method="post"
               action="https://forms.un-static.com/forms/c395a9533b50685e10f3feb5e5c5d310fab7505e"
             >
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required /><br /><br />
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="NAME"
+                    name="name"
+                    value=""
+                    required
+                  />
+                </div>
+              </div>
 
-              <label for="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="EMAIL"
+                    name="email"
+                    value=""
+                    required
+                  />
+                </div>
+              </div>
+
+              <textarea
+                class="form-control"
+                rows="10"
+                placeholder="MESSAGE"
+                name="message"
                 required
-              /><br /><br />
+              ></textarea>
 
-              <!-- Add more form fields as needed -->
-
-              <button type="submit">Submit</button>
+              <div class="button-wrapper">
+                <button
+                  class="btn btn-primary send-button"
+                  id="submit"
+                  type="submit"
+                  value="SEND"
+                >
+                  <div class="alt-send-button">
+                    <i class="fa fa-paper-plane"></i
+                    ><span class="send-text">SEND</span>
+                  </div>
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </div>
     </section>
-
+    <!-- <h1 id="fancy" class="text-center">Follow Me Below</h1> -->
     <!-- Footer section -->
     <footer class="fixed-footer">
       <div class="container-fluid">
