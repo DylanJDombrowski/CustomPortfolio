@@ -63,3 +63,30 @@ window.addEventListener("load", function () {
     pageUpBtn.style.display = "block";
   }
 });
+
+// set background gradient colors and angle using mouse
+document.onmousemove = e => {
+  var boxw = document.body.getBoundingClientRect().width;
+  var boxh = document.body.getBoundingClientRect().height;
+  var x = e.clientX - boxw / 2;
+  var y = e.clientY - boxh / 2;
+  var rad = Math.atan(y / x) + Math.PI * (x < 0 ? 1.5 : 0.5);
+  var deg = rad * 180 / Math.PI;
+  document.body.style.backgroundImage =
+    "linear-gradient(" + rad + "rad, hsl(" + deg + ",90%,30%), hsl(" + (deg + 120) + ",90%,30%))";
+};
+
+// Function to load and insert HTML content
+function loadHTML(url, elementId) {
+    fetch(url)
+        .then((response) => response.text())
+        .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+        });
+}
+
+// Load and insert the header
+loadHTML('components/header.html', 'header-placeholder');
+
+// Load and insert the footer
+loadHTML('components/footer.html', 'footer-placeholder');

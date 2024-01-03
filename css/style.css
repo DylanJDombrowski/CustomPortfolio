@@ -1,37 +1,11 @@
-.page-up-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #008000;
-    color: #fff;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-  }
-  
-  /* Add a margin-bottom of 4rem (adjust as needed) to create a larger break between sections */
-.section-spacing {
-    margin-bottom: 4rem;
-}
 
-  /* Media query to show the button on larger screens */
-  @media (min-width: 768px) {
-    .page-up-btn {
-      display: block;
-    }
-  }
-  
 nav {
     padding: 15%;
     max-width: auto;
-    background-color: black;
+    background-color: #36454F;
 }
 body{
-    background-color: rgb(249, 249, 249);
+    background-color: hsl(240, 61%, 7%);
 }
 .navbar .navbar-nav .nav-link {
     color: white;
@@ -42,17 +16,9 @@ body{
 
 /* display background color black on navbar scroll */
 .navbarScroll.navbarDark {
-    background-color: black;
+    background-color: #e5530b;
 }
 
-/* hero background image */
-.bgimage {
-    height:100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('../img/subject.jpg');
-    background-size:cover;
-    position:relative;
-    background-position: center center;
-}
 
 .dark-gradient-overlay {
     position: absolute;
@@ -80,25 +46,6 @@ body{
     transform: translate(-50%, -50%);
     color: white;
 }
-.arrow-down-link {
-    display: flex; /* Use flexbox to center vertically and horizontally */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100%; /* Ensure the anchor takes the full height of its parent (.hero-text) */
-  }
-  
-  .arrow-down {
-    position: relative;
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-top: 25px solid #fff; /* Rotate the triangle to face down */
-    cursor: pointer;
-  }
-  .arrow-down-link:hover .arrow-down {
-    border-top: 25px solid #008000; /* Change the border color on hover */
-  }
 
 /* spacing on all sections */
 /* #about, #services, #portfolio, #contact {
@@ -127,10 +74,10 @@ body{
     text-align: left;
 }
 .card:hover .servicesIcon {
-    color: #008000;
+    color: #e5530b;
 }
 .servicesText:hover {
-    border: 1px solid #008000;
+    border: 1px solid #e5530b;
 }
 
 /* social media icons styling */
@@ -139,7 +86,7 @@ body{
     cursor: pointer;
 }
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover, .fa-github:hover {
-    color: #008000;
+    color: #e5530b;
 }
 .fab {
     color: white;
@@ -152,7 +99,7 @@ body{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: black; /* Your desired background color */
+    background-color: #36454F; /* Your desired background color */
     color: white; /* Text color */
     text-align: center;
 }
@@ -167,7 +114,7 @@ body{
 }
 .card-subtitle {
     font-size: smaller; /* Adjust as needed */
-    color: grey;
+    color: #36454F;
     margin-bottom: 10px; /* Adds space below the subtitle */
 }
 form {
@@ -200,7 +147,7 @@ input[type="message"] {
 
 /* Style the form submit button */
 button[type="submit"] {
-    background-color: #007bff;
+    background-color: #36454F;
     /* Change to your preferred button color */
     color: white;
     padding: 10px 20px;
