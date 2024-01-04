@@ -1,5 +1,24 @@
 // Your JavaScript code
 document.addEventListener("DOMContentLoaded", function () {
+  function loadHTML(url, elementId) {
+    fetch(url)
+        .then((response) => response.text())
+        .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+        });
+}
+
+// Load and insert the header
+loadHTML('components/header.html', 'header-placeholder');
+
+// Load and insert the footer
+loadHTML('components/footer.html', 'footer-placeholder');
+
+// Load and insert the about section
+loadHTML('components/about.html', 'about-placeholder');
+
+// Load and insert the Social Icons
+loadHTML('components/socialIcons.html', 'social-icons-placeholder');
   // Smooth scroll to the section with an offset for padding
   const navLinks = document.querySelectorAll("a.nav-link");
   const offset = -100; // Increase this value to show more of the top screen
@@ -77,16 +96,3 @@ document.onmousemove = e => {
 };
 
 // Function to load and insert HTML content
-function loadHTML(url, elementId) {
-    fetch(url)
-        .then((response) => response.text())
-        .then((data) => {
-            document.getElementById(elementId).innerHTML = data;
-        });
-}
-
-// Load and insert the header
-loadHTML('components/header.html', 'header-placeholder');
-
-// Load and insert the footer
-loadHTML('components/footer.html', 'footer-placeholder');

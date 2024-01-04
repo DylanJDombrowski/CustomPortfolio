@@ -6,6 +6,7 @@ nav {
 }
 body{
     background-color: hsl(240, 61%, 7%);
+    color: white;
 }
 .navbar .navbar-nav .nav-link {
     color: white;
@@ -170,4 +171,26 @@ button[type="submit"]:hover {
  .btn-primary {
      width: 30%;
      margin-top: 15px;
+ }
+ /* Set the default font to Ubuntu for the entire body */
+ body {
+     font-family: 'Ubuntu', sans-serif;
+ }
+
+ .name {
+     font-family: 'Ubuntu', sans-serif;
+     font-size: 4.5rem;
+     font-weight: bold;
+     /* Adjust as needed */
+ }
+
+ .job-title {
+     font-family: 'Ubuntu', sans-serif;
+     font-size: 2rem;
+     /* Adjust as needed */
+ }
+
+ .description {
+     font-family: 'Ubuntu', sans-serif;
+     font-size: 1.2rem;
  }
