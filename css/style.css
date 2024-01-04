@@ -6,7 +6,7 @@ nav {
 }
 body{
     background-color: hsl(240, 61%, 7%);
-    color: white;
+    color: #94a3b8;
 }
 .navbar .navbar-nav .nav-link {
     color: white;
@@ -174,23 +174,23 @@ button[type="submit"]:hover {
  }
  /* Set the default font to Ubuntu for the entire body */
  body {
-     font-family: 'Ubuntu', sans-serif;
+     font-family: 'inter', sans-serif;
  }
 
  .name {
-     font-family: 'Ubuntu', sans-serif;
+     font-family: 'inter', sans-serif;
      font-size: 4.5rem;
      font-weight: bold;
-     /* Adjust as needed */
+     color: #e2e8f2;
  }
 
  .job-title {
-     font-family: 'Ubuntu', sans-serif;
+     font-family: 'inter', sans-serif;
      font-size: 2rem;
-     /* Adjust as needed */
+    color: #e2e8f2;
  }
 
  .description {
-     font-family: 'Ubuntu', sans-serif;
+     font-family: 'inter', sans-serif;
      font-size: 1.2rem;
  }
