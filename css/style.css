@@ -12,14 +12,8 @@ body{
     color: white;
     font-size: 1.2rem;
     font-weight: 400;
+    display: flex;
 }
-
-
-/* display background color black on navbar scroll */
-.navbarScroll.navbarDark {
-    background-color: #e5530b;
-}
-
 
 .dark-gradient-overlay {
     position: absolute;
@@ -53,8 +47,8 @@ body{
     margin-top: 4rem;
     padding-top: 4rem;
 } */
-#contact {
-    padding-bottom: 4rem;
+#home {
+    padding: 4rem;
 }
 /* about section image css */
 .imageAboutPage {

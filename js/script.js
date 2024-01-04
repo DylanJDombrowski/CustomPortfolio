@@ -7,18 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(elementId).innerHTML = data;
         });
 }
-
-// Load and insert the header
 loadHTML('components/header.html', 'header-placeholder');
-
-// Load and insert the footer
 loadHTML('components/footer.html', 'footer-placeholder');
-
-// Load and insert the about section
 loadHTML('components/about.html', 'about-placeholder');
-
-// Load and insert the Social Icons
 loadHTML('components/socialIcons.html', 'social-icons-placeholder');
+
   // Smooth scroll to the section with an offset for padding
   const navLinks = document.querySelectorAll("a.nav-link");
   const offset = -100; // Increase this value to show more of the top screen
@@ -54,14 +47,7 @@ loadHTML('components/socialIcons.html', 'social-icons-placeholder');
       header.classList.remove("navbarDark");
     }
   };
-
-  // Add other custom JavaScript code here...
-  // ...
 });
-
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
 
 // Show/hide the "Page Up" button based on screen size
 window.addEventListener("resize", function () {
@@ -73,26 +59,16 @@ window.addEventListener("resize", function () {
   }
 });
 
-// Initially check the screen size on page load
-window.addEventListener("load", function () {
-  const pageUpBtn = document.getElementById("pageUpBtn");
-  if (window.innerWidth < 768) {
-    pageUpBtn.style.display = "none";
-  } else {
-    pageUpBtn.style.display = "block";
-  }
-});
-
 // set background gradient colors and angle using mouse
-document.onmousemove = e => {
-  var boxw = document.body.getBoundingClientRect().width;
-  var boxh = document.body.getBoundingClientRect().height;
-  var x = e.clientX - boxw / 2;
-  var y = e.clientY - boxh / 2;
-  var rad = Math.atan(y / x) + Math.PI * (x < 0 ? 1.5 : 0.5);
-  var deg = rad * 180 / Math.PI;
-  document.body.style.backgroundImage =
-    "linear-gradient(" + rad + "rad, hsl(" + deg + ",90%,30%), hsl(" + (deg + 120) + ",90%,30%))";
-};
+// document.onmousemove = e => {
+//   var boxw = document.body.getBoundingClientRect().width;
+//   var boxh = document.body.getBoundingClientRect().height;
+//   var x = e.clientX - boxw / 2;
+//   var y = e.clientY - boxh / 2;
+//   var rad = Math.atan(y / x) + Math.PI * (x < 0 ? 1.5 : 0.5);
+//   var deg = rad * 180 / Math.PI;
+//   document.body.style.backgroundImage =
+//     "linear-gradient(" + rad + "rad, hsl(" + deg + ",90%,30%), hsl(" + (deg + 120) + ",90%,30%))";
+// };
 
 // Function to load and insert HTML content
