@@ -2,6 +2,11 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+:root{
+    --custom-grey: #e2e8f2;
+    --body-color: #94a3b8;
+}
+
 nav {
     padding: 15%;
     max-width: auto;
@@ -9,78 +14,16 @@ nav {
 }
 body{
     background-color: hsl(240, 61%, 7%);
-    color: #94a3b8;
-}
-.navbar .navbar-nav .nav-link {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 400;
-    display: flex;
+    font-family: 'inter', sans-serif;
 }
 
-.dark-gradient-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
-    pointer-events: none; /* This ensures the overlay doesn't block interaction with elements below it */
-  }
-  
-/* text css above hero image*/
-.hero_title {
-    margin-top: 80px;
-    font-size: 4.5rem;
-}
-.hero_desc {
-    font-size: 2rem;
-}
-.hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-/* spacing on all sections */
-/* #about, #services, #portfolio, #contact {
-    margin-top: 4rem;
-    padding-top: 4rem;
-} */
 #home {
     padding: 4rem;
-}
-/* about section image css */
-.imageAboutPage {
-    width: 100%;
-}
-
-/* services section css */
-.servicesText.card {
-    height: 280px;
-    cursor: pointer;
-  }
-.servicesIcon {
-    font-size: 36px;
-    text-align: center;
-    width: 100%;
-}
-.card-title {
-    text-align: left;
-}
-.card:hover .servicesIcon {
-    color: #e5530b;
-}
-.servicesText:hover {
-    border: 1px solid #e5530b;
 }
 
 /* social media icons styling */
 .social-icons {
-    font-size: 36px;
+    font-size: 30px;
     cursor: pointer;
 }
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover, .fa-github:hover {
@@ -91,103 +34,3 @@ body{
     margin: 0 10px;
 }
 
-/* footer styling */
-.fixed-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #36454F; /* Your desired background color */
-    color: white; /* Text color */
-    text-align: center;
-}
-.hero-buttons {
-    margin-top: 20px; /* Adds space above the buttons */
-    display: flex; /* Aligns buttons in a row */
-    justify-content: center; /* Centers the buttons horizontally */
-    gap: 20px; /* Adds space between the buttons */
-    font-size: medium;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 500;
-}
-.card-subtitle {
-    font-size: smaller; /* Adjust as needed */
-    color: #36454F;
-    margin-bottom: 10px; /* Adds space below the subtitle */
-}
-form {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Style the form labels */
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-/* Style the form input fields */
-input[type="text"],
-input[type="email"],
-input[type="message"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 16px;
-}
-
-/* Style the form submit button */
-button[type="submit"] {
-    background-color: #36454F;
-    /* Change to your preferred button color */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* Style the submit button on hover */
-button[type="submit"]:hover {
-    background-color: #0056b3;
-    /* Change to the hover color */
-}
- .button-wrapper {
-     display: flex;
-     justify-content: center;
- }
-
- .btn-primary {
-     width: 30%;
-     margin-top: 15px;
- }
- /* Set the default font to Ubuntu for the entire body */
- body {
-     font-family: 'inter', sans-serif;
- }
-
- .name {
-     font-family: 'inter', sans-serif;
-     font-size: 4.5rem;
-     font-weight: bold;
-     color: #e2e8f2;
- }
-
- .job-title {
-     font-family: 'inter', sans-serif;
-     font-size: 2rem;
-    color: #e2e8f2;
- }
-
- .description {
-     font-family: 'inter', sans-serif;
-     font-size: 1.2rem;
- }

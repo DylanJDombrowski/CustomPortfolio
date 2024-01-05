@@ -2,10 +2,21 @@
   <div class="container-fluid">
     <div class="row">
       <!-- Left Column -->
-      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-column">
-        <h1 class="name text-4xl font-bold">Dylan J. Dombrowski</h1>
-        <h2 class="job-title text-2xl text-white">Web Developer</h2>
-        <p class="description text-lg text-white">
+      <div
+        class="col-lg-6 col-md-12 col-sm-12 col-xs-12 lg:sticky lg:top-0 lg:z-50"
+      >
+        <h1
+          class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl"
+        >
+          Dylan J. Dombrowski
+        </h1>
+        <h2
+          class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl"
+          style="color: var(--body-grey)"
+        >
+          Web Developer
+        </h2>
+        <p class="mt-4 max-w-xs leading-normal" style="color: var(--body-grey)">
           Bridging the gap between imagination and pixels, offering accessible
           products for the web and beyond.
         </p>
@@ -14,22 +25,34 @@
 
         <div class="nav-list">
           <ul class="navbar-nav ms-auto space-x-4">
-            <li class="nav-item">
-              <a class="nav-link text-white" href="pages/about.html">About</a>
+            <li class="nav-item" style="color: var(--body-grey)">
+              <a
+                class="nav-link"
+                style="color: var(--body-grey)"
+                href="pages/about.html"
+                >About</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="pages/achievements.html"
+              <a
+                class="nav-link"
+                style="color: var(--body-grey)"
+                href="pages/achievements.html"
                 >Achievements</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="pages/projects.html"
+              <a
+                class="nav-link"
+                style="color: var(--body-grey)"
+                href="pages/projects.html"
                 >Projects</a
               >
             </li>
             <li class="nav-item">
               <a
-                class="nav-link text-white"
+                class="nav-link"
+                style="color: var(--body-grey)"
                 href="Dylan Dombrowski Resume.pdf"
                 target="_blank"
                 >Resume</a
@@ -40,7 +63,9 @@
       </div>
 
       <!-- Right Column (Initially Hidden on Small Screens) -->
-      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 right-column">
+      <div
+        class="col-lg-6 col-md-12 col-sm-12 col-xs-12 right-column overflow-y-auto"
+      >
         <div id="about-placeholder"></div>
       </div>
     </div>

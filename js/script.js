@@ -35,18 +35,6 @@ loadHTML('components/socialIcons.html', 'social-icons-placeholder');
       // If it points to a different page, allow the default navigation action
     });
   });
-
-  // Your existing JavaScript code goes here
-  // For example, the code to change the navbar background on scroll
-  const header = document.querySelector(".navbar");
-  window.onscroll = function () {
-    const top = window.scrollY;
-    if (top >= 100) {
-      header.classList.add("navbarDark");
-    } else {
-      header.classList.remove("navbarDark");
-    }
-  };
 });
 
 // Show/hide the "Page Up" button based on screen size
