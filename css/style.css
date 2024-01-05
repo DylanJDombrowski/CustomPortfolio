@@ -1,7 +1,3 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 :root{
     --custom-grey: #e2e8f2;
     --body-color: #94a3b8;
