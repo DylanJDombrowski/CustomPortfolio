@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(elementId).innerHTML = data;
         });
 }
+loadHTML('components/layout.html', 'layout-placeholder');
 loadHTML('components/header.html', 'header-placeholder');
 loadHTML('components/footer.html', 'footer-placeholder');
 loadHTML('components/about.html', 'about-placeholder');
 loadHTML('components/socialIcons.html', 'social-icons-placeholder');
-
 });
