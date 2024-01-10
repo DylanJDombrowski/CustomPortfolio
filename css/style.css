@@ -3,14 +3,22 @@
     --body-color: #94a3b8;
 }
 
-nav {
+/* nav {
     padding: 15%;
     max-width: auto;
     background-color: #36454F;
-}
+} */
 body{
     background-color: hsl(240, 61%, 7%);
     font-family: 'inter', sans-serif;
+    margin: 20px;
+    padding: 20px;
+        
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
 }
 
 #home {
