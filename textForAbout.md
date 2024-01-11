@@ -41,3 +41,9 @@
             just say hello, I’m glad our paths have crossed. Let’s do something
             great together.
           </p>
+
+Greetings! I'm Dylan Dombrowski, a fervent tech enthusiast whose journey started in a lively pizza kitchen near Chicago. That bustling environment was my first classroom, where I mastered the art of dedication and fervor. These lessons have been my guiding stars in the realm of technology.
+<br /><br />
+My areas of expertise include artificial intelligence, UI/UX design, and web development. Presently, I am honing these skills at the University of Louisville's President’s Office as an IT student assistant. Here, my days are filled with innovation, exploration, and a tireless pursuit of excellence in technology.
+<br /><br />
+When not immersed in the digital world, you'll find me experimenting in the kitchen or engaging in creative collaborations. I am always on the lookout for new stories and experiences. Let's connect and create something extraordinary together!
