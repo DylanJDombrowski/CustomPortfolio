@@ -1,6 +1,6 @@
 :root{
     --custom-grey: #e2e8f2;
-    --body-color: #94a3b8;
+    --body-grey: #b6c2d3;
 }
 
 #about {
@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
+    color: var(--body-grey);
 }
 
 #identity h1 {
@@ -24,7 +25,7 @@
     font-weight: 400;
     margin-top: .75rem;
     line-height: 1.5rem;
-    color: var(--body-grey);
+    color: var(--custom-grey);
     font-family: 'inter', sans-serif;
 }
 #identity p {
@@ -37,11 +38,13 @@
 #navigation ul{
     justify-content: space-between;
     margin-top: 1rem;
-    
+    margin-left: 1rem;
+    list-style-type: none;
 }
 
 #navigation a{
-    color: var(--body-grey);
+    color: var(--custom-grey);
+    font-weight: bold;
 }
 
 
@@ -62,6 +65,8 @@ body{
 
 /* social media icons styling */
 .social-icons {
+    position: sticky;
+    bottom: 20px;
     font-size: 30px;
     cursor: pointer;
 }
