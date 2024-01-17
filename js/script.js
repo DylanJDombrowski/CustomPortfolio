@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function loadComponents() {
         try {
             await loadHTML('components/layout.html', 'layout-placeholder');
-            await loadHTML('components/header.html', 'header-placeholder');
+            await loadHTML('components/header.html', 'header');
             await loadHTML('components/identity.html', 'identity-placeholder');
             await loadHTML('components/nav.html', 'nav-placeholder');
             await loadHTML('components/socialIcons.html', 'social-icons-placeholder');

@@ -35,16 +35,76 @@
     color: var(--body-grey);
 }
 
-#navigation ul{
-    justify-content: space-between;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    list-style-type: none;
+/* start nav code here  */
+#navigation {
+    margin: 10%;
+}
+.custom-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-#navigation a{
+.custom-nav li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.custom-nav a {
+    text-decoration: none;
+    color: var(--body-grey);
+    /* Customize as needed */
+    transition: transform 0.3s;
+    padding-left: 10px;
+    /* Space for the line */
+}
+
+/* Horizontal lines with varying lengths */
+.custom-nav li::before {
+    content: '';
+    left: 0;
+    /* Line starts at the beginning of the li element */
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.5px;
+    background-color: var(--body-grey);
+    /* Line color */
+    transition: width 0.4s;
+}
+
+.custom-nav li:nth-child(1)::before {
+    width: 30px;
+}
+
+.custom-nav li:nth-child(2)::before {
+    width: 50px;
+}
+
+.custom-nav li:nth-child(3)::before {
+    width: 40px;
+}
+
+/* Hover effect */
+.custom-nav li:hover::before {
+    width: 60px;
+    /* Increase length on hover */
+}
+
+.custom-nav li:hover a {
+    transform: translateX(10px);
+    /* Move text to the right on hover */
+}
+
+/* end nav code here  */ 
+
+
+nav {
     color: var(--custom-grey);
     font-weight: bold;
+    
 }
 
 
@@ -64,17 +124,18 @@ body{
 }
 
 /* social media icons styling */
-.social-icons {
+#social-icons {
     position: sticky;
+    margin-top: 50%;
     bottom: 20px;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
 }
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover, .fa-github:hover {
     color: #e5530b;
 }
 .fab {
-    color: white;
+    color: var(--body-grey);
     margin: 0 10px;
 }
 

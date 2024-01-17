@@ -580,12 +580,6 @@ video {
   --body-color: #94a3b8;
 }
 
-nav {
-  padding: 15%;
-  max-width: auto;
-  background-color: #36454F;
-}
-
 body{
   background-color: hsl(240, 61%, 7%);
   font-family: 'inter', sans-serif;
