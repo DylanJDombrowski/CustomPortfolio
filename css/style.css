@@ -1,162 +1,207 @@
-:root{
-    --custom-grey: #e2e8f2;
-    --body-grey: #b6c2d3;
-    --select-grey: #ffffff;
-    --hover-grey: #d8dee5;
+:root {
+  --custom-grey: #e2e8f2;
+  --body-grey: #b6c2d3;
+  --select-grey: #ffffff;
+  --hover-grey: #d8dee5;
 }
 
+/* About Component */
 #about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 4rem;
-    color: var(--body-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  color: var(--body-grey);
 }
+@media (max-width: 991px) {
+}
+@media (min-width: 991px) {
+  #about h1 {
+    display: none;
+  }
+}
+/* End About Component */
 
-#identity h1 {
-    font-size: 3rem;
+/* Identity Component */
+@media (max-width: 991px) {
+  #identity {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    /* padding left and right from .container-fluid scss is causing padding */
+  }
+  #identity h1 {
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: -0.025em;
     color: var(--custom-grey);
-    font-family: 'inter', sans-serif;
-}
+    font-family: "inter", sans-serif;
+  }
 
-#identity h2 {
+  #identity h2 {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-top: .75rem;
+    margin-top: 0.75rem;
     line-height: 1.5rem;
     color: var(--custom-grey);
-    font-family: 'inter', sans-serif;
-}
-#identity p {
+    font-family: "inter", sans-serif;
+  }
+
+  #identity p {
+    display: none;
     max-width: 30rem;
     margin-top: 1rem;
     line-height: 1.5rem;
     color: var(--body-grey);
+  }
+}
+@media (min-width: 991px) {
+  #identity h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--custom-grey);
+    font-family: "inter", sans-serif;
+  }
+
+  #identity h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0.75rem;
+    line-height: 1.5rem;
+    color: var(--custom-grey);
+    font-family: "inter", sans-serif;
+  }
+
+  #identity p {
+    max-width: 30rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    color: var(--body-grey);
+  }
+}
+/* End Identity Component */
+
+/* Navigation Component  */
+
+@media (max-width: 991px) {
+  .custom-nav {
+    display: none;
+  }
+}
+@media (min-width: 991px) {
+  #navigation {
+    margin: 10%;
+  }
 }
 
-/* start nav code here  */
-#navigation {
-    margin: 10%;
+nav {
+  color: var(--custom-grey);
+  font-weight: bold;
 }
+
 .custom-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .custom-nav li {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    position: relative;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .custom-nav a {
-    text-decoration: none;
-    color: var(--body-grey);
-    /* Customize as needed */
-    transition: transform 0.3s;
-    padding-left: 10px;
-    /* Space for the line */
+  text-decoration: none;
+  color: var(--body-grey); /* Set default color here */
+  transition: transform 0.3s, color 0.3s; /* Combine transitions */
+  padding-left: 10px; /* Space for the line */
 }
 
 /* Horizontal lines with varying lengths */
 .custom-nav li::before {
-    content: '';
-    left: 0;
-    /* Line starts at the beginning of the li element */
-    top: 50%;
-    transform: translateY(-50%);
-    height: 1.5px;
-    background-color: var(--body-grey);
-    /* Line color */
-    transition: width 0.4s;
+  content: "";
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1.5px;
+  background-color: var(--body-grey);
+  transition: width 0.4s; /* Keep this transition */
 }
 
 .custom-nav li:nth-child(1)::before {
-    width: 30px;
+  width: 30px;
 }
-
 .custom-nav li:nth-child(2)::before {
-    width: 50px;
+  width: 50px;
 }
-
 .custom-nav li:nth-child(3)::before {
-    width: 40px;
+  width: 40px;
 }
 
-/* Hover effect */
+/* Hover effect combined */
 .custom-nav li:hover::before {
-    width: 60px;
-    /* Increase length on hover */
+  width: 60px;
 }
-
 .custom-nav li:hover a {
-    transform: translateX(10px);
-    /* Move text to the right on hover */
+  transform: translateX(10px);
 }
 
-/* Change color on hover */
-nav a:hover {
-    color: var(--hover-grey); /* Replace with the color you want */
+/* Change color on hover and active */
+.custom-nav li:hover a,
+nav a:active,
+.current {
+  color: var(--hover-grey); /* Combine color changes */
 }
 
-/* Change color when selected or current section */
-nav a:active, .current {
-    color: var(--select-grey); /* Replace with the color you want */
+/* End Navigation Component */
+
+html {
+  background-color: hsl(240, 61%, 7%);
 }
-/* end nav code here  */ 
-
-
-nav {
-    color: var(--custom-grey);
-    font-weight: bold;
-    
-}
-
-
-html{
-    background-color: hsl(240, 61%, 7%);
-}
-body{
-    color: var(--body-grey);
-    background-color: hsl(240, 61%, 7%);
-    font-family: 'inter', sans-serif;
-    margin: 20px;
-    padding: 20px;
+body {
+  color: var(--body-grey);
+  background-color: hsl(240, 61%, 7%);
+  font-family: "inter", sans-serif;
+  margin: 20px;
+  padding: 20px;
 }
 
-.sticky{
-    position: sticky;
-    top: 3rem;
+.sticky {
+  position: sticky;
+  top: 3rem;
 }
 
 /* social media icons styling */
 #social-icons {
-    position: sticky;
-    margin-top: 50%;
-    bottom: 20px;
-    font-size: 25px;
-    cursor: pointer;
+  position: sticky;
+  margin-top: 50%;
+  bottom: 20px;
+  font-size: 25px;
+  cursor: pointer;
 }
-.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover, .fa-github:hover {
-    color: #e5530b;
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-linkedin:hover,
+.fa-twitch:hover,
+.fa-github:hover {
+  color: #e5530b;
 }
 .fab {
-    color: var(--body-grey);
-    margin: 0 10px;
+  color: var(--body-grey);
+  margin: 0 10px;
 }
 
 @media (max-width: 991px) {
-    .custom-nav {
-        display: none;
-    }
+  .custom-nav {
+    display: none;
+  }
 
-    #social-icons {
-        margin-top: 10px;
-    }
+  #social-icons {
+    margin-top: 10px;
+  }
 }
