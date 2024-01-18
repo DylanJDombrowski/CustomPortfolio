@@ -1,6 +1,8 @@
 :root{
     --custom-grey: #e2e8f2;
     --body-grey: #b6c2d3;
+    --select-grey: #ffffff;
+    --hover-grey: #d8dee5;
 }
 
 #about {
@@ -8,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    padding-top: 4rem;
     color: var(--body-grey);
 }
 
@@ -98,6 +100,15 @@
     /* Move text to the right on hover */
 }
 
+/* Change color on hover */
+nav a:hover {
+    color: var(--hover-grey); /* Replace with the color you want */
+}
+
+/* Change color when selected or current section */
+nav a:active, .current {
+    color: var(--select-grey); /* Replace with the color you want */
+}
 /* end nav code here  */ 
 
 
@@ -139,3 +150,12 @@ body{
     margin: 0 10px;
 }
 
+@media (max-width: 991px) {
+    .custom-nav {
+        display: none;
+    }
+
+    #social-icons {
+        margin-top: 10px;
+    }
+}
