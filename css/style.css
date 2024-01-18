@@ -124,6 +124,7 @@ html{
 }
 body{
     color: var(--body-grey);
+    background-color: hsl(240, 61%, 7%);
     font-family: 'inter', sans-serif;
     margin: 20px;
     padding: 20px;
