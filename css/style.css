@@ -5,23 +5,33 @@
   --hover-grey: #d8dee5;
 }
 /* Page specific */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol {
-  margin: 0;
-  padding: 0;
-}
+
 .container-fluid {
   padding-left: 0;
   padding-right: 0;
   /* padding left and right from .container-fluid scss is causing padding */
 }
+#left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 html {
-  background-color: hsl(240, 61%, 7%);
+  background: rgb(131,58,180);
+background: linear-gradient(135deg, rgba(131,58,180,0.3981967787114846) 0%, rgba(7,7,29,1) 30%, rgba(7,7,29,1) 70%, rgba(255,132,0,0.3981967787114846) 100%);
+  );
 }
 body {
   color: var(--body-grey);
-  background-color: hsl(240, 61%, 7%);
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    135deg,
+    rgba(131, 58, 180, 0.3981967787114846) 0%,
+    rgba(7, 7, 29, 1) 30%,
+    rgba(7, 7, 29, 1) 70%,
+    rgba(255, 132, 0, 0.3981967787114846) 100%
+  );
   font-family: "inter", sans-serif;
-  margin-top: 20px;
 }
 .sticky {
   position: sticky;
@@ -31,7 +41,6 @@ body {
 
 /* Layout Component */
 #layout-placeholder {
-  margin: 10px;
   width: 100%;
 }
 /* About Component */
@@ -43,9 +52,9 @@ body {
   padding-top: 4rem;
   color: var(--body-grey);
 }
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
 }
-@media (min-width: 1024px) {
+@media (min-width: 991px) {
   #about h1 {
     display: none;
   }
@@ -53,8 +62,7 @@ body {
 /* End About Component */
 
 /* Identity Component */
-@media (max-width: 1024px) {
- 
+@media (max-width: 991px) {
   #identity h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -73,14 +81,13 @@ body {
   }
 
   #identity p {
-    
     max-width: 30rem;
     margin-top: 1rem;
     line-height: 1.5rem;
     color: var(--body-grey);
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 991px) {
   #identity h1 {
     font-size: 3rem;
     font-weight: 700;
@@ -109,12 +116,12 @@ body {
 
 /* Navigation Component  */
 
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
   .custom-nav {
     display: none;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 991px) {
   #navigation {
     margin: 10%;
   }
@@ -181,7 +188,7 @@ nav a:active,
 .current {
   color: var(--hover-grey); /* Combine color changes */
 }
-@media (max-width: 1024px) {
+@media (max-width: 990px) {
   .custom-nav {
     display: none;
   }
@@ -190,9 +197,9 @@ nav a:active,
     margin-top: 10px;
   }
 }
-@media (min-width: 1024px) {
-  #nsocial-icons {
-    margin-top: 50%;
+@media (min-width: 992px) {
+  #social-icons {
+    align-self: flex-end;
   }
 }
 /* End Navigation Component */
@@ -200,7 +207,7 @@ nav a:active,
 /* social media icons styling */
 #social-icons {
   position: sticky;
-  
+
   bottom: 20px;
   font-size: 25px;
   cursor: pointer;
@@ -229,9 +236,9 @@ nav a:active,
   padding-top: 4rem;
   color: var(--body-grey);
 }
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
 }
-@media (min-width: 1024px) {
+@media (min-width: 991px) {
   #achievements h1 {
     display: none;
   }
