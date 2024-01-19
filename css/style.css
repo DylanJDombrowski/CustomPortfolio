@@ -17,8 +17,13 @@
   justify-content: space-between;
 }
 html {
-  background: rgb(131,58,180);
-background: linear-gradient(135deg, rgba(131,58,180,0.3981967787114846) 0%, rgba(7,7,29,1) 30%, rgba(7,7,29,1) 70%, rgba(255,132,0,0.3981967787114846) 100%);
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    135deg,
+    rgba(131, 58, 180, 0.3981967787114846) 0%,
+    rgba(7, 7, 29, 1) 30%,
+    rgba(7, 7, 29, 1) 70%,
+    rgba(255, 132, 0, 0.3981967787114846) 100% /* hsl(240, 61%, 7%) */
   );
 }
 body {
