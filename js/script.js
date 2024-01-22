@@ -1,10 +1,30 @@
-// Your JavaScript code
 document.addEventListener("DOMContentLoaded", function () {
+  function attachCollapsibleListeners() {
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  }
+
   function loadHTML(url, elementId) {
     return fetch(url)
       .then((response) => response.text())
       .then((data) => {
         document.getElementById(elementId).innerHTML = data;
+        if (elementId === "achievements-placeholder") {
+          attachCollapsibleListeners();
+        }
+      })
+      .catch((error) => {
+        console.error("Error loading HTML: ", error);
       });
   }
 
@@ -27,4 +47,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   loadComponents();
+  attachCollapsibleListeners(); // Attach event listeners after initial page load
 });

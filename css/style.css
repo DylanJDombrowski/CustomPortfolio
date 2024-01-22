@@ -1,6 +1,6 @@
 :root {
-  --custom-grey: #e2e8f2;
-  --body-grey: #b6c2d3;
+  --custom-grey: white; /* #e2e8f2; */
+  --body-grey: white; /* #b6c2d3 */
   --select-grey: #ffffff;
   --hover-grey: #d8dee5;
 }
@@ -17,24 +17,20 @@
   justify-content: space-between;
 }
 html {
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    135deg,
-    rgba(131, 58, 180, 0.3981967787114846) 0%,
-    rgba(7, 7, 29, 1) 30%,
+  background: rgb(7, 7, 29);
+  background: radial-gradient(
+    circle,
     rgba(7, 7, 29, 1) 70%,
-    rgba(255, 132, 0, 0.3981967787114846) 100% /* hsl(240, 61%, 7%) */
+    rgba(131, 58, 180, 0.6979166666666667) 100%
   );
 }
 body {
   color: var(--body-grey);
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    135deg,
-    rgba(131, 58, 180, 0.3981967787114846) 0%,
-    rgba(7, 7, 29, 1) 30%,
+  background: rgb(7, 7, 29);
+  background: radial-gradient(
+    circle,
     rgba(7, 7, 29, 1) 70%,
-    rgba(255, 132, 0, 0.3981967787114846) 100%
+    rgba(131, 58, 180, 0.6979166666666667) 100%
   );
   font-family: "inter", sans-serif;
 }
@@ -248,3 +244,46 @@ nav a:active,
     display: none;
   }
 }
+
+/* Card Styling for Achievements / Projects */
+.background {
+  height: 150px;
+  padding: 10px;
+}
+
+.card {
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 0 10px 25px rgba(131, 58, 180, 0.1);
+  border-radius: 5px;
+  backdrop-filter: blur(14px);
+  background-color: rgba(53, 53, 61, 0.2);
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+/* End of Card Styling */
