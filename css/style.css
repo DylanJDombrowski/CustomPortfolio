@@ -20,17 +20,20 @@ html {
   background: rgb(7, 7, 29);
   background: radial-gradient(
     circle,
-    rgba(7, 7, 29, 1) 70%,
-    rgba(131, 58, 180, 0.6979166666666667) 100%
+    rgba(7, 7, 29, 1) 100%,
+    rgba(131, 58, 180, 1) 100%
   );
 }
 body {
   color: var(--body-grey);
-  background: rgb(7, 7, 29);
-  background: radial-gradient(
-    circle,
-    rgba(7, 7, 29, 1) 70%,
-    rgba(131, 58, 180, 0.6979166666666667) 100%
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    126deg,
+    rgba(131, 58, 180, 0.196516106442577) 0%,
+    rgba(7, 7, 29, 1) 25%,
+    rgba(7, 7, 29, 1) 35%,
+    rgba(131, 58, 180, 0.196516106442577) 60%,
+    rgba(7, 7, 29, 1) 90%
   );
   font-family: "inter", sans-serif;
 }
@@ -179,6 +182,7 @@ nav {
 .custom-nav li:hover::before {
   width: 60px;
 }
+
 .custom-nav li:hover a {
   transform: translateX(10px);
 }
@@ -210,7 +214,7 @@ nav a:active,
   position: sticky;
 
   bottom: 20px;
-  font-size: 25px;
+  font-size: 30px;
   cursor: pointer;
 }
 .fa-facebook:hover,
@@ -219,7 +223,7 @@ nav a:active,
 .fa-linkedin:hover,
 .fa-twitch:hover,
 .fa-github:hover {
-  color: #e5530b;
+  color: #833ab4;
 }
 .fab {
   color: var(--body-grey);
@@ -250,6 +254,16 @@ nav a:active,
   color: var(--custom-grey);
   font-weight: 500;
   font-family: "inter", sans-serif;
+}
+
+.btn-primary {
+  background-color: #07071d;
+  border-color: #833ab4;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0a0a2f;
+  border-color: #833ab4;
 }
 .card {
   margin-right: auto;
