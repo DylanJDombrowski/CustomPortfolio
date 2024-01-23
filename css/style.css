@@ -11,6 +11,10 @@
   padding-right: 0;
   /* padding left and right from .container-fluid scss is causing padding */
 }
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
 #left-column {
   display: flex;
   flex-direction: column;
@@ -61,6 +65,18 @@ body {
 @media (min-width: 991px) {
   #about h1 {
     display: none;
+  }
+  #experience h1 {
+    display: none;
+  }
+  #experience {
+    margin-top: 15%;
+  }
+  #projects h1 {
+    display: none;
+  }
+  #projects {
+    margin-top: 15%;
   }
 }
 /* End About Component */
@@ -249,6 +265,9 @@ nav a:active,
   }
 }
 
+.gaper {
+  margin-bottom: 10%;
+}
 /* Card Styling for Achievements / Projects */
 #card h4 {
   color: var(--custom-grey);
@@ -268,12 +287,14 @@ nav a:active,
 .card {
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 15px;
   box-shadow: 0 10px 25px rgba(131, 58, 180, 0.1);
   border-radius: 5px;
   backdrop-filter: blur(14px);
   background-color: rgba(53, 53, 61, 0.2);
   padding: 10px;
   text-align: center;
+  width: 100%;
 }
 
 .collapsible {
@@ -281,6 +302,17 @@ nav a:active,
   margin-left: auto;
   border-radius: 5px;
   cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  background-color: rgba(53, 53, 61, 0);
+}
+
+.noCollapse {
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 5px;
   padding: 10px;
   width: 100%;
   border: none;
