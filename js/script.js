@@ -2,12 +2,19 @@ document.addEventListener("DOMContentLoaded", function () {
   function attachCollapsibleListeners() {
     var coll = document.getElementsByClassName("collapsible");
     for (var i = 0; i < coll.length; i++) {
+      // Initialize content to be hidden
+      var content = coll[i].nextElementSibling;
+      if (content) {
+        // Check if content is not null
+        content.style.display = "none";
+      }
+
       coll[i].addEventListener("click", function () {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
-        if (content.style.display === "block") {
+        if (content && content.style.display === "block") {
           content.style.display = "none";
-        } else {
+        } else if (content) {
           content.style.display = "block";
         }
       });
@@ -19,7 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.text())
       .then((data) => {
         document.getElementById(elementId).innerHTML = data;
-        if (elementId === "achievements-placeholder") {
+        if (
+          elementId === "achievements-placeholder" ||
+          elementId === "projects-placeholder"
+        ) {
           attachCollapsibleListeners();
         }
       })
@@ -47,5 +57,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   loadComponents();
-  attachCollapsibleListeners(); // Attach event listeners after initial page load
 });

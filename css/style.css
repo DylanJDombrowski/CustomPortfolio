@@ -63,18 +63,18 @@ body {
 @media (max-width: 991px) {
 }
 @media (min-width: 991px) {
-  #about h1 {
+  /* #about h1 {
     display: none;
   }
   #experience h1 {
     display: none;
-  }
+  } */
   #experience {
     margin-top: 15%;
   }
-  #projects h1 {
+  /* #projects h1 {
     display: none;
-  }
+  } */
   #projects {
     margin-top: 15%;
   }
@@ -258,16 +258,16 @@ nav a:active,
   color: var(--body-grey);
 }
 @media (max-width: 991px) {
+  .gaper {
+    padding-bottom: 50px;
+  }
 }
 @media (min-width: 991px) {
-  #achievements h1 {
-    display: none;
+  .gaper {
+    padding-bottom: 100px;
   }
 }
 
-.gaper {
-  margin-bottom: 10%;
-}
 /* Card Styling for Achievements / Projects */
 #card h4 {
   color: var(--custom-grey);
