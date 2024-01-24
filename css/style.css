@@ -33,6 +33,7 @@ html {
   text-align: left;
 }
 body {
+  overscroll-behavior: none;
   color: var(--body-grey);
   background: rgb(131, 58, 180);
   background: linear-gradient(
@@ -349,3 +350,7 @@ nav a:active,
   text-align: center;
 }
 /* End of Card Styling */
+#timeline {
+  color: var(--body-grey);
+  font-size: 12px;
+}
