@@ -28,6 +28,10 @@ html {
     rgba(131, 58, 180, 1) 100%
   );
 }
+
+.textLeft {
+  text-align: left;
+}
 body {
   color: var(--body-grey);
   background: rgb(131, 58, 180);
@@ -308,7 +312,7 @@ nav a:active,
   box-shadow: 0 10px 25px rgba(131, 58, 180, 0.1);
   border-radius: 5px;
   backdrop-filter: blur(14px);
-  background-color: rgba(53, 53, 61, 0.2);
+  background-color: rgba(53, 53, 61, 0.15);
   padding: 10px;
   text-align: center;
   width: 100%;
