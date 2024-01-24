@@ -261,13 +261,30 @@ nav a:active,
   .gaper {
     padding-bottom: 50px;
   }
+  .hide {
+    display: none;
+  }
 }
 @media (min-width: 991px) {
   .gaper {
     padding-bottom: 100px;
   }
+  .chevron {
+    display: none;
+  }
+}
+.chevron {
+  font-size: 12px; /* Adjust the size as needed */
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: 10px;
+  user-select: none;
+  transition: transform 0.3s;
 }
 
+.chevron.up {
+  transform: rotate(-180deg);
+}
 /* Card Styling for Achievements / Projects */
 #card h4 {
   color: var(--custom-grey);
