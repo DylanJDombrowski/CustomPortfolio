@@ -30,9 +30,6 @@ html {
   );
 }
 
-.textLeft {
-  text-align: left;
-}
 body {
   overscroll-behavior: none;
   color: var(--body-grey);
@@ -339,6 +336,10 @@ nav a:active,
   background-color: rgba(53, 53, 61, 0);
 }
 
+.card h3 {
+  text-align: left;
+  font-size: large;
+}
 .noCollapse {
   margin-right: auto;
   margin-left: auto;
@@ -350,6 +351,10 @@ nav a:active,
   background-color: rgba(53, 53, 61, 0);
 }
 
+#jobDesc {
+  text-align: left;
+  font-size: small;
+}
 .content {
   margin-right: auto;
   margin-left: auto;
@@ -359,9 +364,8 @@ nav a:active,
 }
 /* End of Card Styling */
 .timeline {
-  color: rgb(197, 197, 197);
-  font-size: 14px;
-  margin-top: 10%;
+  color: rgb(168, 168, 168);
+  font-size: 12px;
 }
 
 .resume {
@@ -394,4 +398,34 @@ svg {
   width: 100%;
   height: 100%;
   fill: var(--custom-grey);
+}
+
+.tag-container {
+  display: flex; /* Aligns tags in a row */
+  flex-wrap: wrap; /* Allows tags to wrap to the next line */
+  align-items: center; /* Vertically aligns tags */
+  padding: 0;
+}
+
+.tag {
+  background: #e3ebf7;
+  border-radius: 8px;
+  padding: 3px 8px 4px;
+  margin: 5px 4px;
+  color: #285192;
+  font-weight: 500;
+  border: 1px solid #e3ebf7;
+  white-space: nowrap;
+}
+
+.tag:first-child {
+  margin-left: 16px;
+}
+
+.tag:last-child {
+  margin-right: 16px;
+}
+
+.tag:hover {
+  background: #dce4f0;
 }
