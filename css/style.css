@@ -3,6 +3,7 @@
   --body-grey: white; /* #b6c2d3 */
   --select-grey: #ffffff;
   --hover-grey: #d8dee5;
+  --yellow: #fcff5d;
 }
 /* Page specific */
 
@@ -212,7 +213,7 @@ nav {
 .custom-nav li:hover a,
 nav a:active,
 .current {
-  color: var(--hover-grey); /* Combine color changes */
+  color: var(--yellow); /* Combine color changes */
 }
 @media (max-width: 990px) {
   .custom-nav {
@@ -244,7 +245,7 @@ nav a:active,
 .fa-linkedin:hover,
 .fa-twitch:hover,
 .fa-github:hover {
-  color: #833ab4;
+  color: var(--yellow);
 }
 .fab {
   color: var(--body-grey);
@@ -310,13 +311,20 @@ nav a:active,
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 15px;
-  box-shadow: 0 10px 25px rgba(131, 58, 180, 0.1);
+  box-shadow: 0 10px 25px rgba(131, 58, 180, 0.02);
   border-radius: 5px;
   backdrop-filter: blur(14px);
-  background-color: rgba(53, 53, 61, 0.15);
+  background-color: rgba(53, 53, 61, 0.05);
   padding: 10px;
   text-align: center;
   width: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and scale */
+}
+
+.card:hover {
+  background-color: rgba(53, 53, 61, 0.1); /* Adjust opacity as needed */
+  box-shadow: 0 20px 50px rgba(131, 58, 180, 0.15); /* Enhanced shadow for lift effect */
+  transform: scale(1.05); /* Slight increase in size to simulate lifting */
 }
 
 .collapsible {
@@ -350,7 +358,40 @@ nav a:active,
   text-align: center;
 }
 /* End of Card Styling */
-#timeline {
-  color: var(--body-grey);
-  font-size: 12px;
+.timeline {
+  color: rgb(197, 197, 197);
+  font-size: 14px;
+  margin-top: 10%;
+}
+
+.resume {
+  margin-top: 10%;
+  transition-duration: 0.3s; /* Replace $defaultDuration with an actual duration */
+  transition-property: transform;
+  text-decoration: none;
+  display: flex;
+}
+
+.resume:hover {
+  transform: scale(1.1);
+  color: violet;
+}
+b {
+  color: var(--yellow);
+  font-weight: 500;
+}
+.resume a {
+  color: var(--custom-grey);
+  text-decoration: none;
+  font-size: 1.2em;
+
+  display: inline;
+}
+
+svg {
+  margin-left: 8px;
+  margin-top: 8px;
+  width: 100%;
+  height: 100%;
+  fill: var(--custom-grey);
 }
