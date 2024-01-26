@@ -429,3 +429,17 @@ svg {
 .tag:hover {
   background: #dce4f0;
 }
+
+@media screen and (max-width: 600px) {
+  #about-body {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .chevron {
+    cursor: pointer;
+  }
+}
