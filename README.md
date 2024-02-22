@@ -17,7 +17,7 @@ Technologies Used: Node.js, Express, Hugging Face Inference API, HTML, CSS, Java
 
 ## Skills
 
-I pride myself on my critical thinking and effective communication skills, always questioning the status quo to refine processes. This approach, coupled with my technical skills in HTML, CSS, Node.js, React, and various APIs, enables me to create innovative and efficient solutions.
+I pride myself on my critical thinking and effective communication skills, always questioning the status quo to refine processes. This approach, coupled with my technical skills in HTML, CSS, JavaScript, Node.js, React, and Rest APIs, enables me to create innovative and efficient solutions.
 
 ## Technical Proficiencies:
 
