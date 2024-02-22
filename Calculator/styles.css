@@ -1,0 +1,115 @@
+:root {
+  --white: #ffffff;
+  --off-white: #f9f9f9;
+  --beige: #f5f5dc;
+  --pale-beige: #e6d8ad;
+  --light-gray: #d3d3d3;
+  --lighter-gray: #f0f0f0;
+  --tan: #d2b48c;
+  --muted-green: #9ccb9e;
+  --pale-blue: #b0c4de;
+  --sage-green: #bccc8a;
+  --soft-sage: #a1b56c;
+  --soft-blue: #aec6cf;
+  --powder-blue: #b0e0e6;
+  --dark-gray: #a9a9a9;
+  --terracotta: #e2725b;
+  --taupe: #c7b9a3;
+}
+html {
+  background-color: var(--dark-gray);
+  position: relative;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  min-height: 500px;
+  padding: 10px;
+  margin-top: 50px;
+}
+.screen {
+  height: 100px;
+  background-color: var(--beige);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.lastCalculation {
+  font-size: 15pt;
+  padding-top: 10px;
+}
+.currentCalculation {
+  font-size: 25pt;
+}
+.calculator {
+  width: 400px;
+  border: black solid 2px;
+  background-color: var(--taupe);
+  padding: 20px;
+  border-radius: 10px;
+}
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.doublebutton {
+  background-color: var(--terracotta);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.button {
+  background-color: var(--terracotta);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button:hover,
+.doublebutton:hover {
+  background-color: var(--sage-green);
+}
+
+.button:active,
+.doublebutton:active {
+  background-color: var(--soft-sage);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.fa-github {
+  color: var(--terracotta);
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
