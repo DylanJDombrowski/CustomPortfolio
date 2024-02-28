@@ -1,0 +1,78 @@
+/* Reset default styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set default font and color */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Set container width and center content */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style headings */
+h1,
+h2,
+h3 {
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+/* Style paragraphs */
+p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Style links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style lists */
+ul,
+ol {
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Style images */
+img {
+  max-width: 100%;
+  height: auto;
+}
