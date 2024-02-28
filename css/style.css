@@ -443,3 +443,13 @@ svg {
     cursor: pointer;
   }
 }
+
+.no-style-link {
+  color: inherit; /* Makes the link color the same as the surrounding text */
+  text-decoration: none; /* Removes the underline */
+}
+
+/* Optional: If you want to add a subtle effect on hover */
+.no-style-link:hover {
+  text-decoration: underline; /* Adds underline on hover, can be changed to other styles */
+}
