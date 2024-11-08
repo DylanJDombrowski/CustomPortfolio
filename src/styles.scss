@@ -1,441 +1,219 @@
+// styles.scss
+
+// Import fonts
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap");
+
+// Custom Properties
 :root {
-    --custom-grey: white; /* #e2e8f2; */
-    --body-grey: white; /* #b6c2d3 */
-    --select-grey: #ffffff;
-    --hover-grey: #d8dee5;
-    --yellow: #fcff5d;
+  // Color System
+  --color-primary: #1a365d; // Deep Blue
+  --color-primary-light: #2a4a7f;
+  --color-primary-dark: #102a4c;
+
+  --color-secondary: #8b0000; // Deep Red
+  --color-secondary-light: #a31515;
+  --color-secondary-dark: #6b0000;
+
+  --color-accent: #ffd700; // Gold
+  --color-accent-light: #ffe44d;
+  --color-accent-dark: #ccac00;
+
+  // Gradients
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    var(--color-secondary),
+    var(--color-secondary-light)
+  );
+  --gradient-blend: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+  // Typography
+  --font-display: "Abril Fatface", serif;
+  --font-heading: "Raleway", sans-serif;
+  --font-mono: "Courier Prime", monospace;
+
+  // Spacing
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  // Transitions
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  // Shadows
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Page specific */
-.container-fluid, .container {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-#left-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-html {
-    background: rgb(7, 7, 29);
-    background: radial-gradient(circle, rgba(7, 7, 29, 1) 100%, rgba(131, 58, 180, 1) 100%);
+// Global Reset & Base Styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    overscroll-behavior: none;
-    color: var(--body-grey);
-    background: rgb(131, 58, 180);
-    background: linear-gradient(
-        126deg,
-        rgba(131, 58, 180, 0.196516106442577) 0%,
-        rgba(7, 7, 29, 1) 25%,
-        rgba(7, 7, 29, 1) 35%,
-        rgba(131, 58, 180, 0.196516106442577) 60%,
-        rgba(7, 7, 29, 1) 90%
-    );
-    font-family: "inter", sans-serif;
+  font-family: var(--font-heading);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply text-gray-800;
 }
 
-.sticky {
-    position: sticky;
-    top: 3rem;
+// Typography Classes
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
 }
 
-/* Layout Component */
-#layout-placeholder {
-    width: 100%;
+.font-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
 }
 
-/* About Component */
-#about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 4rem;
-    color: var(--body-grey);
+.font-mono {
+  font-family: var(--font-mono);
 }
 
-@media (min-width: 991px) {
-    #experience, #projects {
-        margin-top: 15%;
-    }
+// Animation Keyframes
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Identity Component */
-#identity h1, #identity h2, #identity p {
-    font-family: "inter", sans-serif;
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-#identity h1 {
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    color: var(--custom-grey);
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-#identity h2 {
-    font-weight: 400;
-    margin-top: 0.75rem;
-    line-height: 1.5rem;
-    color: var(--custom-grey);
+// Utility Classes
+.animate-fade-up {
+  animation: fadeUp var(--transition-base);
 }
 
-#identity p {
-    max-width: 30rem;
-    margin-top: 1rem;
-    line-height: 1.5rem;
-    color: var(--body-grey);
+.animate-scale-in {
+  animation: scaleIn var(--transition-base);
 }
 
-@media (max-width: 991px) {
-    #identity h1 {
-        font-size: 2rem;
-    }
-
-    #identity h2 {
-        font-size: 1.5rem;
-    }
+.animate-slide-in {
+  animation: slideInRight var(--transition-base);
 }
 
-@media (min-width: 991px) {
-    #identity h1 {
-        font-size: 3rem;
-    }
-
-    #identity h2 {
-        font-size: 1.5rem;
-    }
+// Common Components
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  background-image: var(--gradient-blend);
 }
 
-/* Navigation Component */
-@media (max-width: 991px) {
-    .custom-nav {
-        display: none;
-    }
+.hover-card {
+  @apply transition-all duration-300;
+  box-shadow: var(--shadow-md);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+  }
 }
 
-@media (min-width: 991px) {
-    #navigation {
-        margin: 10%;
-    }
+.button-primary {
+  @apply px-6 py-3 rounded-lg text-white font-heading text-sm font-semibold
+         transition-all duration-300 inline-flex items-center justify-center;
+  background-image: var(--gradient-primary);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
 
-nav {
-    color: var(--custom-grey);
-    font-weight: bold;
+.button-secondary {
+  @apply px-6 py-3 rounded-lg text-white font-heading text-sm font-semibold
+         transition-all duration-300 inline-flex items-center justify-center;
+  background-image: var(--gradient-secondary);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
 }
 
-.custom-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+// Form Styles
+.form-input {
+  @apply w-full px-4 py-3 rounded-lg border-2 font-mono text-sm
+         transition-all duration-300;
+
+  &:focus {
+    @apply outline-none border-primary ring-2 ring-primary ring-opacity-50;
+  }
 }
 
-.custom-nav li {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    position: relative;
+// Section Styles
+.section-container {
+  @apply container mx-auto px-4 py-16;
 }
 
-.custom-nav a {
-    text-decoration: none;
-    color: var(--body-grey); /* Set default color here */
-    transition: transform 0.3s, color 0.3s; /* Combine transitions */
-    padding-left: 10px; /* Space for the line */
+.section-title {
+  @apply font-display text-4xl mb-12 text-center;
 }
 
-/* Horizontal lines with varying lengths */
-.custom-nav li::before {
-    content: "";
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 1.5px;
-    background-color: var(--body-grey);
-    transition: width 0.4s; /* Keep this transition */
+// Card Grid System
+.card-grid {
+  @apply grid gap-8;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.custom-nav li:nth-child(1)::before {
-    width: 30px;
-}
-.custom-nav li:nth-child(2)::before {
-    width: 50px;
-}
-.custom-nav li:nth-child(3)::before {
-    width: 40px;
+// Responsive Utilities
+@screen md {
+  .section-title {
+    @apply text-5xl;
+  }
 }
 
-/* Hover effect combined */
-.custom-nav li:hover::before {
-    width: 60px;
-}
-
-.custom-nav li:hover a {
-    transform: translateX(10px);
-}
-
-/* Change color on hover and active */
-.custom-nav li:hover a,
-nav a:active,
-.current {
-    color: var(--yellow); /* Combine color changes */
-}
-
-@media (max-width: 990px) {
-    .custom-nav {
-        display: none;
-    }
-
-    #social-icons {
-        margin-top: 10px;
-    }
-}
-
-@media (min-width: 992px) {
-    #social-icons {
-        align-self: flex-end;
-    }
-}
-
-/* End Navigation Component */
-
-/* social media icons styling */
-#social-icons {
-    position: sticky;
-    bottom: 20px;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.fa-facebook:hover,
-.fa-instagram:hover,
-.fa-twitter:hover,
-.fa-linkedin:hover,
-.fa-twitch:hover,
-.fa-github:hover {
-    color: var(--yellow);
-}
-
-.fab {
-    color: var(--body-grey);
-    margin: 0 10px;
-}
-
-/* End social media icons styling */
-
-/* Achievements Component */
-#achievements {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 4rem;
-    color: var(--body-grey);
-}
-
-@media (max-width: 991px) {
-    .gaper {
-        padding-bottom: 50px;
-    }
-    .hide {
-        display: none;
-    }
-}
-
-@media (min-width: 991px) {
-    .gaper {
-        padding-bottom: 100px;
-    }
-    .chevron {
-        display: none;
-    }
-}
-
-.chevron {
-    font-size: 12px; /* Adjust the size as needed */
-    vertical-align: middle;
-    cursor: pointer;
-    margin-left: 10px;
-    user-select: none;
-    transition: transform 0.3s;
-}
-
-.chevron.up {
-    transform: rotate(-180deg);
-}
-
-/* Card Styling for Achievements / Projects */
-#card h4 {
-    color: var(--custom-grey);
-    font-weight: 500;
-    font-family: "inter", sans-serif;
-}
-
-.btn-primary {
-    background-color: #07071d;
-    border-color: #833ab4;
-}
-
-.btn-primary:hover {
-    color: #fff;
-    background-color: #0a0a2f;
-    border-color: #833ab4;
-}
-
-.card {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 15px;
-    box-shadow: 0 10px 25px rgba(131, 58, 180, 0.02);
-    border-radius: 5px;
-    backdrop-filter: blur(14px);
-    background-color: rgba(53, 53, 61, 0.05);
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and scale */
-}
-
-.card:hover {
-    background-color: rgba(53, 53, 61, 0.1); /* Adjust opacity as needed */
-    box-shadow: 0 20px 50px rgba(131, 58, 180, 0.15); /* Enhanced shadow for lift effect */
-    transform: scale(1.05); /* Slight increase in size to simulate lifting */
-}
-
-.collapsible {
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: center;
-    background-color: rgba(53, 53, 61, 0);
-}
-
-.card h3 {
-    text-align: left;
-    font-size: large;
-}
-
-.noCollapse {
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: center;
-    background-color: rgba(53, 53, 61, 0);
-}
-
-#jobDesc {
-    text-align: left;
-    font-size: small;
-}
-
-.content {
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-}
-
-/* End of Card Styling */
-.timeline {
-    color: rgb(168, 168, 168);
-    font-size: 12px;
-}
-
-.resume {
-    margin-top: 10%;
-    transition-duration: 0.3s; /* Replace $defaultDuration with an actual duration */
-    transition-property: transform;
-    text-decoration: none;
-    display: flex;
-}
-
-.resume:hover {
-    transform: scale(1.1);
-    color: violet;
-}
-
-b {
-    color: var(--yellow);
-    font-weight: 500;
-}
-
-.resume a {
-    color: var(--custom-grey);
-    text-decoration: none;
-    font-size: 1.2em;
-    display: inline;
-}
-
-svg {
-    margin-left: 8px;
-    margin-top: 8px;
-    width: 100%;
-    height: 100%;
-    fill: var(--custom-grey);
-}
-
-.tag-container {
-    display: flex; /* Aligns tags in a row */
-    flex-wrap: wrap; /* Allows tags to wrap to the next line */
-    align-items: center; /* Vertically aligns tags */
-    padding: 0;
-}
-
-.tag {
-    background: #e3ebf7;
-    border-radius: 8px;
-    padding: 3px 8px 4px;
-    margin: 5px 4px;
-    color: #285192;
-    font-weight: 500;
-    border: 1px solid #e3ebf7;
-    white-space: nowrap;
-}
-
-.tag:first-child {
-    margin-left: 0px;
-}
-
-.tag:last-child {
-    margin-right: 16px;
-}
-
-.tag:hover {
-    background: #dce4f0;
-}
-
-@media screen and (max-width: 600px) {
-    #about-body {
-        display: none;
-    }
-
-    .show {
-        display: block;
-    }
-
-    .chevron {
-        cursor: pointer;
-    }
-}
-
-.no-style-link {
-    color: inherit; /* Makes the link color the same as the surrounding text */
-    text-decoration: none; /* Removes the underline */
-}
-
-/* Optional: If you want to add a subtle effect on hover */
-.no-style-link:hover {
-    text-decoration: underline; /* Adds underline on hover, can be changed to other styles */
+// Print Styles
+@media print {
+  .no-print {
+    display: none;
+  }
 }

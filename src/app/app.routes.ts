@@ -1,13 +1,33 @@
 import { Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { WorkComponent } from './work/work.component';
-import { DinerComponent } from './diner/diner.component';
-import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './pages/about.component';
+import { ContactComponent } from './pages/contact.component';
+import { DinerComponent } from './pages/diner.component';
+import { WorkComponent } from './pages/work.component';
 
 export const routes: Routes = [
-  { path: 'about', component: AboutComponent },
-  { path: 'work', component: WorkComponent },
-  { path: 'diner', component: DinerComponent },
-  { path: 'work', component: WorkComponent },
-  { path: 'contact', component: ContactComponent },
+  {
+    path: 'about',
+    component: AboutComponent,
+    data: { animation: 'AboutPage' },
+  },
+  {
+    path: 'work',
+    component: WorkComponent,
+    data: { animation: 'WorkPage' },
+  },
+  {
+    path: 'diner',
+    component: DinerComponent,
+    data: { animation: 'DinerPage' },
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    data: { animation: 'ContactPage' },
+  },
+  {
+    path: '',
+    redirectTo: '/about',
+    pathMatch: 'full',
+  },
 ];
