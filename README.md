@@ -1,6 +1,6 @@
-## Introduction
+# DjdCom
 
-Hello! I'm Dylan Dombrowski, a web development enthusiast and entrepreneur. My work is all about blending passion with efficiency to create solutions that help others achieve their goals. My vision is to run a thriving web development business, leveraging AI and the insights gained from my diverse career experiences.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
 
 ## About Me
 
@@ -19,22 +19,10 @@ Technologies Used: Node.js, Express, Hugging Face Inference API, HTML, CSS, Java
 
 I pride myself on my critical thinking and effective communication skills, always questioning the status quo to refine processes. This approach, coupled with my technical skills in HTML, CSS, JavaScript, Node.js, React, and Rest APIs, enables me to create innovative and efficient solutions.
 
-## Technical Proficiencies:
+## Running end-to-end tests
 
-Front-End Development: HTML, CSS, JavaScript
-Back-End Development: Node.js, Express
-API Integration: Hugging Face Inference API, Postman for API exploration and code generation
-Others: UI/UX Design, AI Solutions
-Experience
-As the Founder & Lead Developer at Vettras Solutions LLC, I've navigated the complexities of establishing and maintaining a business, gaining invaluable insights into business operations. My experiences at the University of Louisville have honed my communication skills and helped me understand my role in the broader scheme of things, guiding my professional growth.
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Education
+## Further help
 
-Graduate of the University of Louisville, where I engaged in various projects, including designing websites for non-profits such as Blue Ridge Animal Sanctuary and Spin for Steven. These experiences have enriched my understanding of web development and its impact.
-
-## Certifications
-
-Postman API Certification
-Languages
-English (Fluent)
-Spanish (Currently Learning)
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

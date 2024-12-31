@@ -1,0 +1,219 @@
+// styles.scss
+
+// Import fonts
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap");
+
+// Custom Properties
+:root {
+  // Color System
+  --color-primary: #1a365d; // Deep Blue
+  --color-primary-light: #2a4a7f;
+  --color-primary-dark: #102a4c;
+
+  --color-secondary: #8b0000; // Deep Red
+  --color-secondary-light: #a31515;
+  --color-secondary-dark: #6b0000;
+
+  --color-accent: #ffd700; // Gold
+  --color-accent-light: #ffe44d;
+  --color-accent-dark: #ccac00;
+
+  // Gradients
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    var(--color-secondary),
+    var(--color-secondary-light)
+  );
+  --gradient-blend: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+  // Typography
+  --font-display: "Abril Fatface", serif;
+  --font-heading: "Raleway", sans-serif;
+  --font-mono: "Courier Prime", monospace;
+
+  // Spacing
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  // Transitions
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  // Shadows
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+// Global Reset & Base Styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-heading);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply text-gray-800;
+}
+
+// Typography Classes
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+// Animation Keyframes
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Utility Classes
+.animate-fade-up {
+  animation: fadeUp var(--transition-base);
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--transition-base);
+}
+
+.animate-slide-in {
+  animation: slideInRight var(--transition-base);
+}
+
+// Common Components
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  background-image: var(--gradient-blend);
+}
+
+.hover-card {
+  @apply transition-all duration-300;
+  box-shadow: var(--shadow-md);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+  }
+}
+
+.button-primary {
+  @apply px-6 py-3 rounded-lg text-white font-heading text-sm font-semibold
+         transition-all duration-300 inline-flex items-center justify-center;
+  background-image: var(--gradient-primary);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.button-secondary {
+  @apply px-6 py-3 rounded-lg text-white font-heading text-sm font-semibold
+         transition-all duration-300 inline-flex items-center justify-center;
+  background-image: var(--gradient-secondary);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+// Form Styles
+.form-input {
+  @apply w-full px-4 py-3 rounded-lg border-2 font-mono text-sm
+         transition-all duration-300;
+
+  &:focus {
+    @apply outline-none border-primary ring-2 ring-primary ring-opacity-50;
+  }
+}
+
+// Section Styles
+.section-container {
+  @apply container mx-auto px-4 py-16;
+}
+
+.section-title {
+  @apply font-display text-4xl mb-12 text-center;
+}
+
+// Card Grid System
+.card-grid {
+  @apply grid gap-8;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+// Responsive Utilities
+@screen md {
+  .section-title {
+    @apply text-5xl;
+  }
+}
+
+// Print Styles
+@media print {
+  .no-print {
+    display: none;
+  }
+}
