@@ -25,12 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
     return fetch(url)
       .then((response) => response.text())
       .then((data) => {
-        document.getElementById(elementId).innerHTML = data;
-        if (
-          elementId === "achievements-placeholder" ||
-          elementId === "projects-placeholder"
-        ) {
-          attachCollapsibleListeners();
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.innerHTML = data;
+          if (elementId === "achievements-placeholder" || elementId === "contact-placeholder") {
+            attachCollapsibleListeners();
+          }
+        } else {
+          console.error(`Element with ID ${elementId} not found.`);
         }
       })
       .catch((error) => {
@@ -46,11 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
       await loadHTML("components/nav.html", "nav-placeholder");
       await loadHTML("components/socialIcons.html", "social-icons-placeholder");
       await loadHTML("components/about.html", "about-placeholder");
-      await loadHTML(
-        "components/achievements.html",
-        "achievements-placeholder"
-      );
-      await loadHTML("components/projects.html", "projects-placeholder");
+      await loadHTML("components/achievements.html", "achievements-placeholder");
+      await loadHTML("components/contact.html", "contact-placeholder");
     } catch (error) {
       console.error("Error:", error);
     }

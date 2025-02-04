@@ -453,3 +453,89 @@ svg {
 .no-style-link:hover {
   text-decoration: underline; /* Adds underline on hover, can be changed to other styles */
 }
+
+/* Contact Form Styling */
+#contact {
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: rgba(53, 53, 61, 0.05); /* Slight background for contrast */
+  backdrop-filter: blur(14px); /* Matches your card styling */
+  box-shadow: 0 10px 25px rgba(131, 58, 180, 0.02); /* Subtle shadow */
+}
+
+#contact h1 {
+  color: var(--custom-grey);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--body-grey);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid rgba(131, 58, 180, 0.2); /* Purple border for consistency */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9); /* Brighter white background */
+  color: #07071d; /* Darker text for better contrast */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(131, 58, 180, 0.5); /* Highlight border on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(131, 58, 180, 0.3); /* Subtle glow effect */
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 150px;
+}
+
+button[type="submit"] {
+  background-color: rgba(131, 58, 180, 0.8); /* Purple background */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: rgba(131, 58, 180, 1); /* Brighter purple on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+button[type="submit"]:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+#form-status {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--yellow); /* Use your yellow for success/error messages */
+  font-weight: 500;
+}
