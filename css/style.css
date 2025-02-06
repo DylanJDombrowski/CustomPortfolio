@@ -3,7 +3,7 @@
   --body-grey: white; /* #b6c2d3 */
   --select-grey: #ffffff;
   --hover-grey: #d8dee5;
-  --yellow: #fcff5d;
+  --highlight: #B794F4; 
 }
 /* Page specific */
 
@@ -307,21 +307,24 @@ nav a:active,
 .card {
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 15px;
+  margin-bottom: 2rem;
+  border-left: 3px solid transparent;
   box-shadow: 0 10px 25px rgba(131, 58, 180, 0.02);
   border-radius: 5px;
   backdrop-filter: blur(14px);
   background-color: rgba(53, 53, 61, 0.05);
-  padding: 10px;
+  padding: 1.5rem;
   text-align: center;
   width: 100%;
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and scale */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .card:hover {
-  background-color: rgba(53, 53, 61, 0.1); /* Adjust opacity as needed */
-  box-shadow: 0 20px 50px rgba(131, 58, 180, 0.15); /* Enhanced shadow for lift effect */
-  transform: scale(1.05); /* Slight increase in size to simulate lifting */
+  background-color: rgba(53, 53, 61, 0.15);
+  border-left-color: rgba(131, 58, 180, 0.6);
+
+  box-shadow: 0 15px 30px rgba(131, 58, 180, 0.2);
+  transform: none;
 }
 
 .collapsible {
@@ -355,6 +358,15 @@ nav a:active,
   text-align: left;
   font-size: small;
 }
+
+#jobTitle {
+  color: var(--custom-grey);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
 .content {
   margin-right: auto;
   margin-left: auto;
@@ -381,7 +393,7 @@ nav a:active,
   color: violet;
 }
 b {
-  color: var(--yellow);
+  color: var(--highlight);
   font-weight: 500;
 }
 .resume a {
@@ -408,14 +420,13 @@ svg {
 }
 
 .tag {
-  background: #e3ebf7;
-  border-radius: 8px;
-  padding: 3px 8px 4px;
-  margin: 5px 4px;
-  color: #285192;
-  font-weight: 500;
-  border: 1px solid #e3ebf7;
-  white-space: nowrap;
+  background: rgba(131, 58, 180, 0.1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin: 3px 6px 3px 0;
+  color: var(--custom-grey);
+  font-size: 0.85rem;
+  border: 1px solid rgba(131, 58, 180, 0.2);
 }
 
 .tag:first-child {
@@ -427,7 +438,7 @@ svg {
 }
 
 .tag:hover {
-  background: #dce4f0;
+  background: rgba(131, 58, 180, 0.2);
 }
 
 @media screen and (max-width: 600px) {
