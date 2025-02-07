@@ -44,12 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       await loadHTML("components/layout.html", "layout-placeholder");
       await loadHTML("components/header.html", "header");
-      await loadHTML("components/identity.html", "identity-placeholder");
-      await loadHTML("components/nav.html", "nav-placeholder");
-      await loadHTML("components/socialIcons.html", "social-icons-placeholder");
       await loadHTML("components/about.html", "about-placeholder");
-      await loadHTML("components/achievements.html", "achievements-placeholder");
-      await loadHTML("components/contact.html", "contact-placeholder");
     } catch (error) {
       console.error("Error:", error);
     }
