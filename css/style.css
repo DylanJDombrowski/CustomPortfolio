@@ -7,6 +7,63 @@
 }
 /* Page specific */
 
+/* UNDER CONSTRUCTION */
+
+#under-construction {
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.construction-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--body-grey);
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: rgba(53, 53, 61, 0.05);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(131, 58, 180, 0.2);
+  transition: all 0.3s ease;
+}
+
+.construction-link:hover {
+  background-color: rgba(53, 53, 61, 0.15);
+  transform: translateY(-2px);
+  color: var(--custom-grey);
+}
+
+.construction-text {
+  font-size: 0.9rem;
+  margin: 0 8px;
+}
+
+.construction-icon {
+  font-size: 0.9rem;
+}
+
+/* UNDER CONSTRUCTION */
+
+.success-message {
+  background-color: rgba(72, 187, 120, 0.1);
+  color: #48bb78;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(72, 187, 120, 0.2);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.error-message {
+  background-color: rgba(245, 101, 101, 0.1);
+  color: #f56565;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(245, 101, 101, 0.2);
+  margin-top: 1rem;
+  text-align: center;
+}
+
 .container-fluid {
   padding-left: 0;
   padding-right: 0;
@@ -242,7 +299,7 @@ nav a:active,
 .fa-linkedin:hover,
 .fa-twitch:hover,
 .fa-github:hover {
-  color: var(--yellow);
+  color: var(--hover-grey);
 }
 .fab {
   color: var(--body-grey);
